@@ -1,0 +1,172 @@
+/* Importação de fonte */
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Lato:wght@700&display=swap");
+
+/* 
+Referências:
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+https://www.alura.com.br/artigos/css-guia-do-flexbox
+https://desenvolvimentoparaweb.com/css/bem/
+*/
+*{
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Definições gerais (pseudo-elementos), equivalem a constantes*/
+:root{
+    --fonte-titulo: "Lato", sans-serif;
+    --fonte-texto: "Kalam", cursive;
+    --cor-fundo: linear-gradient(to bottom, #ffffff, 50%, #1366d3);
+    --cor-fonte: #e6e6e6;
+    --cor-menu: #4167b9;
+    --cor-borda: #0055ff;
+}
+
+body{
+    background: var(--cor-fundo);
+    color: var(--cor-fonte);
+    font-size: 16px;
+    border: none;
+}
+
+.cabecalho{
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20vh; /* Equivale a 10% da altura da tela (viewport-height)*/
+}
+
+.cabecalho__titulo{
+ font-family: var(--fonte-titulo);
+ font-weight: 700;
+ text-shadow: 2px 1px 1px rgb(45, 48, 51);
+ padding-left: 800px;
+ padding-top: 30%;
+}
+
+.cabecalho__texto{
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgb(31, 32, 34);
+    padding-left: 830px;
+}
+
+h2{
+    font-family: var(--fonte-titulo);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+.principal{
+    height: 75vh; /* Equivale a 75% da altura da tela (viewport-height)*/
+    padding: 0px;
+    margin: 500px;
+    display: flexbox;
+
+}   
+
+
+.section__menu__aside__titulo{
+    font-family: var(--fonte-titulo);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+    color: var(--fonte-titulo);
+    padding: 20px 15px;
+}
+
+.section__principal{
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 25px 10px 10px 10px;
+    margin: 5px;
+
+}
+
+
+div {
+    display: grid;
+    align-items: center ;
+    justify-content: center;
+}
+
+.formulario{
+    padding-top: 20px;
+}
+
+.formulario__fieldset{
+    width: 10%;
+    margin: 11px;
+    border: 1px solid rgb(207, 141, 18);
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+.formulario__texto{
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    width: 120px;
+    text-shadow: 1px 1px 1px rgb(7, 23, 94);
+}
+
+.formulario__fieldset__input{
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+    width: 350px;
+    height: 24px;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.formulario__fieldset__input__descricao {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 440px;
+    height: 25px;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.formulario__fieldset__input__valor {
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+    width: 260px;
+    height: 24px;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.formulario__fieldset__botao{
+    border: 1px solid white;
+    border-radius: 0px;
+    width: 450px;
+    height: 36px;
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    
+}
+
+.rodape{
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 20vh;
+    
+}
+
+.rodape__texto{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}

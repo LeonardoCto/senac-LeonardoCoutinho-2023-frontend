@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+    <title>Cadastro de Endereço</title>
+    <!--Importções de scripts JS, biblioteca externa, arquivos CSS..-->
+    <script>src="./js/endereco.detalhe.js"</script>
+    <link rel="stylesheet" href="../../css/estilosv2.css">
+    </head>
+        <body>
+            <header class="cabecalho">
+                <h1 class="cabecalho__titulo">Cadastro de Endereço</h1>
+                <p class="cabecalho__texto">Informe os dados do seu endereço</p>
+            </header>
+            <main class="principal">
+                <section class="section__menu">
+                    <aside class="section__menu__aside">
+                    </aside>
+                </section>
+                
+                <section class="section__principal">
+                    <div>
+                    <p class="section__menu__aside__titulo"><a href="/index.html">Voltar ao início</a></p>
+                    <p class="section__menu__aside__titulo"><a href="/receita/receita.lisgatem.html">RELATÓRIOS</a></p>
+                    </div>
+                    <form class="formulario" id="formulario">
+                        <div>
+                            <fieldset class="formulario__fieldset" id = "">
+                                <legend> Consulta de CEP</legend>
+                                <div>
+                                    <label class="formulario__texto" for="cep">Informe o CEP:</label>
+                                    <input class="formulario__fieldset__input__descricao" type="text" id="cep" name="cep" minlength="8" required/>
+                                </div>
+                                
+                                <div>
+                                    <label class="formulario__texto"></label>
+                                    <button class="formulario__fieldset__botao" type="button" onclick="buscarCEP()">Buscar CEP</button>    
+                                </div>
+                                
+                    </fieldset>
+                    </div>
+                    <div>
+                        <fieldset class="formulario__fieldset">
+                            <legend>Endereço</legend>
+
+                            <div>
+                                <label class="formulario__texto" for="Rua">Rua:</label>
+                                <input class="formulario__fieldset__input__descricao" type ="text" id="rua" name ="rua" minlenght = "3" required/>
+                            </div>
+
+                            <div>
+                                <label class="formulario__texto" for="Bairro">Bairro:</label>
+                                <input class="formulario__fieldset__input__descricao" type="text" id="=rua" name="rua" minlength="3" required>
+                            </div>
+
+                            <div>
+                                <label class="formulario__texto" for="Bairro">Cidade:</label>
+                                <input class="formulario__fieldset__input__descricao" type="text" id="=cidade" name="cidade" minlength="3" required>
+                            </div>
+
+                            <div>
+                                <label class="formulario__texto" for="Bairro">Estado:</label>
+                                <input class="formulario__fieldset__input__descricao" type="text" id="=estado" name="estado" minlength="3" required>
+                            </div>
+
+                            <div>
+                                <label class="formulario__texto" for="Bairro">Número:</label>
+                                <input class="formulario__fieldset__input__descricao" type="text" id="=numero" name="numero" minlength="3" required>
+                            </div>
+                             <div>
+                                <label class="formulario__texto"></label>
+                                <input class="formulario__fieldset__botao" id="botao" type="submit" value="Cadastrar" />
+                             </div>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <footer class="rodape">
+                            <p class="rodape__texto">Desenvolvido por Leonardo Coutinho</p>
+                    </div>
+                    </form>
+                </section>
+            </main>
+        </footer>
+        </body>
+        </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
