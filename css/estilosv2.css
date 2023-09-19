@@ -170,3 +170,16 @@ div {
     font-weight: 400;
     font-size: 13px;
 }
+
+
+#centralizar{
+    position:absolute; 
+    top:115%;
+    left:50%;
+}
+
+#centralizarTabela{
+    table-layout: initial;
+    position: absolute;
+    
+}

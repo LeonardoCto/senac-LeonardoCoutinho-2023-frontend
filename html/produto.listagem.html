@@ -13,7 +13,36 @@
         </header>
         <main class="principal">
             <section class="section__principal">
-                <table>
+
+                    <div>
+                        <label for="Nome">Nome</label>
+                        <input class="formulario__fieldset__input__descricao" type="text" id="Nome" name="Nome" required >
+                    </div>
+                    <div>
+                        <label for="Nome">Fabricante</label>
+                        <input class="formulario__fieldset__input__descricao" type="text" id="Fabricante" name="Fabricante" required >
+                    </div>
+                    <div>
+                        <label for="ValorMin"> Valor Minímo </label>
+                        <input class="formulario__fieldset__input__descricao" type="number" id="ValorMin" name="ValorMin" minlength="1" required/>
+                    </div>
+                    <div>
+                        <label for="ValorMax"> Valor Máximo </label>
+                        <input  class="formulario__fieldset__input__descricao" type="number" id="ValorMax" name="ValorMax" minlength="1" required/>
+                    </div>
+                    <div>
+                        <label for="PesoMin">Peso Minímo</label>
+                        <input class= "formulario__fieldset__input__descricao" type="number" id="PesoMin" name="PesoMin" minlength="1" required>
+                    </div>
+                    <div>
+                        <label for="PesoMin">Peso Máximo</label>
+                        <input class= "formulario__fieldset__input__descricao" type="number" id="PesoMax" name="PesoMax" minlength="1" required>
+                    </div>
+                    <div id="centralizar">
+                        <button>Consultar</button>
+                    </div>
+                    <div id="centralizarTabela"> 
+                        <table>
                     <thead>
                         <th>#</th>
                         <th>Nome</th>
@@ -21,6 +50,7 @@
                         <th>Valor (R$)</th>
                         <th>Peso (kg)</th>
                     </thead>
+                </div>
                     <tbody id="corpoTabela">
                         
                     </tbody>
