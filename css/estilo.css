@@ -22,7 +22,7 @@ https://desenvolvimentoparaweb.com/css/bem/
 }
 
 body {
-    background: var(--cor-fundo);
+    background: rgb(173, 138, 84);
     color: var(--cor-fonte);
     font-size: 16px;
     border: none;
@@ -179,3 +179,4 @@ table{
     border-width: 2px;
     border: #F1F6F9;
 }
+
