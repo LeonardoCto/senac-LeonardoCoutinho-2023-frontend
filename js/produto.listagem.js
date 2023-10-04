@@ -1,13 +1,35 @@
-async function buscarTodosProdutos(){
+async function buscarTodosProdutos() {
     fetch('http://localhost:8080/api/produtos')
-    .then(resultado => resultado.json())
-    .then(json => { 
-        preencherTabela(json);
-    });
+        .then(resultado => resultado.json())
+        .then(json => {
+            preencherTabela(json);
+        });
 }
 
-function preencherTabela(jsonProdutos){
-    // <tr>
+async function pesquisar() {
+    //POST localhost:8080/api/produtos/filtro
+    //parâmetros: ProdutoSeletor no formato JSON
+    let options = {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({
+            valorMinimo: document.getElementById("inputValorMinimo").value,
+            valorMaximo: inputValorMaximo.value
+        })
+    };
+    const despesaUsuario = await fetch('http://localhost:8080/api/produtos/filtro', options);
+    const despesaJson = await despesaUsuario.json();
+
+    preencherTabela(despesaJson);
+}
+
+function limparTabela() {
+    document.getElementById("corpoTabela").innerHTML = "";
+}
+
+function preencherTabela(jsonProdutos) {
+    this.limparTabela();
+    // <tr>image.png
     //     <td>1</td>
     //     <td>Café</td>
     //     <td>Ouro</td>
@@ -16,7 +38,7 @@ function preencherTabela(jsonProdutos){
     // </tr>
     var dadosTabelaProdutos = document.getElementById('corpoTabela');
 
-    for(let i = 0; i < jsonProdutos.length; i++){
+    for (let i = 0; i < jsonProdutos.length; i++) {
         let novaLinha = dadosTabelaProdutos.insertRow();
 
         let celulaId = novaLinha.insertCell();

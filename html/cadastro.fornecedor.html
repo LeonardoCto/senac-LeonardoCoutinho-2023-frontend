@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cadastro de Endereço</title>
+    <script src="../js/fornecedor.js"></script>
+    <link rel="stylesheet" href="../css/estilo.css">
+
+</head>
+
+<body class="corpoEndereco">
+    <header class="cabecalho">
+        <h1>Cadastro de Fornecedor</h1>
+        <p>Informe os dados do fornecedor</p>
+    </header>
+    <main>
+        <section>
+            <form class="formulario" id="formulario">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" minlength="3" required>
+                </div>
+                <div>
+                    <label for="cnpj">CNPJ:</label>
+                    <input type="text" id="cnpj" name="cnpj" required>
+                </div>
+                <div>
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required>
+                    <input id="botaoCEP" type="submit" value="Consultar CEP" onclick="buscarCEP()">
+                </div>
+                <div>
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required >
+                </div>
+                <div>
+                    <label for="uf">UF:</label>
+
+                    <input type="text" name="uf" id="uf" >
+                </div>
+                <br>
+                <input id="botao" type="button" value="Cadastrar" onclick="cadastrar()" />
+                </div>
+            </form>
+            <table>
+                <input id="botaoListar" type="submit" value="Pesquisar todos" onclick="listarTodos()">
+                <input id="botaoLimpar" type="submit" value="Limpar" onclick="limpar()">
+                <thead>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>CNPJ</th>
+                    <th>CEP</th>
+                    <th>Cidade</th>
+                    <th>UF</th>
+                </thead>
+                <tbody id="corpoTabela">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+
+
+
+</html>

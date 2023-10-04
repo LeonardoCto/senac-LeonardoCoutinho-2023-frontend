@@ -4,14 +4,35 @@
         <title>Listagem de Produtos</title>
         
         <!-- Importações de scripts JS, bibliotecas externas, arquivos CSS... -->
-        <script src="./js/produto.listagem.js"></script>
-        <link rel="stylesheet" href="../css/estilosv2.css">
+        <script src="/js/produto.listagem.js"></script>
+        <link rel="stylesheet" href="/css/estilos.css">
     </head>
     <body>
         <header class="cabecalho">
             <h1 class="cabecalho__titulo">Consulta de Produtos</h1>
         </header>
         <main class="principal">
+            <section class="section__principal">
+               <form>
+                    <div>
+                        <label class="formulario__texto" for="inputValorMinimo">Valor mínimo (R$):</label>
+                        <input class="formulario__fieldset__input__descricao" type="number" id="inputValorMinimo" name="inputValorMinimo"/>    
+                    </div>
+                    <div>
+                        <label class="formulario__texto" for="inputValorMaximo">Valor máximo (R$):</label>
+                        <input class="formulario__fieldset__input__descricao" type="number" id="inputValorMaximo" name="inputValorMaximo"/>    
+                    </div>
+
+                    <div>
+                        <label class="formulario__texto"></label>
+                        <input class="formulario__fieldset__botao" 
+                               id="botaoPesquisar" 
+                               type="button" 
+                               value="Pesquisar"
+                               onclick="pesquisar()"/>  
+                    </div>
+               </form> 
+            </section>
             <section class="section__principal">
 
                     <div>
@@ -52,7 +73,7 @@
                     </thead>
                 </div>
                     <tbody id="corpoTabela">
-                        
+                      
                     </tbody>
                 </table>
             </section>
